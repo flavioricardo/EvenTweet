@@ -6,17 +6,26 @@
                 <?php echo $this->Html->image("{$tweet['Tweet']['profile_image']}"); ?>
                 <?php echo $this->Html->link("@{$tweet['Tweet']['user']}", "http://twitter.com/#!/{$tweet['Tweet']['user']}"); ?>
                 <?php echo $tweet['Tweet']['text']; ?>
-                <?php echo $this->Html->link($tweet['Tweet']['created_at'],
+                <?php echo $this->Html->link($this->Functions->formatTweetDate($tweet['Tweet']['created_at']),
                         "http://twitter.com/#!/{$tweet['Tweet']['user']}/status/{$tweet['Tweet']['id']}", array('id' => 'tweet')); ?>
             </td>
         </tr>
     <?php endforeach; ?>
 </table>
-<?php echo $this->Javascript->link(array('jquery-1.5.2.min')); ?>
 <script type="text/javascript">
     jQuery(document).ready(function() {
-        jQuery('div#header h1').remove();
         setInterval('getNewTweet()', 10000);
+		jQuery('#user_image').each(function() {
+			jQuery('#user_image').qtip({
+				content: jQuery('#user_image').attr('title'),
+				position: {
+					corner: {
+						target: 'topRight',
+						tooltip: 'bottomLeft'
+					}
+				}
+			})
+		})
     });
     function getNewTweet() {
         var tweetId = jQuery('table tbody tr:first-child td a#tweet').attr('href').split('/');
@@ -31,7 +40,7 @@
 						tweet += '<a id="tweet" href="http://twitter.com/#!/' + tweets[i].user + '/status/' + tweets[i].id + '">' + tweets[i].created_at + '</a>';
 						tweet += '</td>';
 						tweet += '</tr>';
-						jQuery('table tbody').prepend(tweet).fadeIn(4000);
+						fadeIn(4000, jQuery('table tbody').prepend(tweet));
 				}
             }
         });

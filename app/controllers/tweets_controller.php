@@ -3,10 +3,10 @@
 class TweetsController extends AppController {
 
 	public $name = 'Tweets';
-	public $helpers = array('Html', 'Form', 'Javascript');
+	public $helpers = array('Html', 'Form', 'Javascript', 'Functions');
 
 	public function index() {
-		$this->set('tweets', $this->Tweet->find('all', array('order' => 'created_at DESC')));
+		$this->set('tweets', $this->Tweet->find('all', array('order' => 'created_at DESC', 'limit' => 15)));
 	}
 
 	public function getTweets($sinceId = null) {
