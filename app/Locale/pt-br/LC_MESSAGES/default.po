@@ -1,0 +1,2 @@
+msgid "Hello, twitters!"
+msgstr "Olá, twitters!"
