@@ -33,7 +33,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $helpers = array('Html', 'Form', 'Js', 'Session', 'TweetsAssist');
+    public $helpers = array('Html', 'Form', 'Js', 'Session', 'Time', 'TweetsAssist');
     public $components = array('Session', 'Cookie');
 
     public function beforeFilter() {
