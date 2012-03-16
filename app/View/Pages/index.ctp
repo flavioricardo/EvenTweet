@@ -2,13 +2,13 @@
     <div class="hero-unit">
         <h1><?php echo __('Hello, twitters!'); ?></h1>
         <p><?php echo __('Show the latest tweets about your event from a hashtag so elegant and funny!'); ?></p>
-        <?php echo $this->Form->create('Pages', array('url' => array('controller' => 'tweets',
-                'action' => 'index'))); ?>
+		<?php echo $this->Form->create('Pages', array('url' => array('controller' => 'tweets',
+				'action' => 'index'))); ?>
         <div class="control-group">
             <div class="controls">
                 <div class="input-prepend input-append">
                     <div class="add-on">#</div><?php echo $this->Form->input('event', array('label' => false,
-            'id' => 'prependedInput', 'div' => false, 'class' => 'span6', 'style' => 'margin-bottom: 0')); ?><?php echo $this->Form->button(__('Go!', true), array('class' => 'btn btn-primary')); ?>
+						'id' => 'prependedInput', 'div' => false, 'class' => 'span6', 'style' => 'margin-bottom: 0')); ?><?php echo $this->Form->button(__('Go!', true), array('class' => 'btn btn-primary')); ?>
                 </div>
             </div>
         </div>
@@ -29,18 +29,6 @@
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn" href="#">View details »</a></p>
         </div>
-    </div>
-</div>
-<div class="modal fade" id="questionsModal">
-    <div class="modal-header">
-        <a class="close" data-dismiss="modal">×</a>
-        <h3><?php echo __('Questions'); ?></h3>
-    </div>
-    <div class="modal-body">
-        <p>One fine body…</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#" class="btn"><?php echo __('Close'); ?></a>
     </div>
 </div>
 <?php echo $this->Html->script('controllers/pages/index'); ?>

@@ -6,3 +6,12 @@ body {
 .sidebar-nav {
     padding: 9px 0 !important;
 }
+
+.reload {
+	margin-bottom: 20px;
+}
+
+table#tweetsList img {
+	height: 48px;
+	width: 48px;
+}

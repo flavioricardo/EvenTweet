@@ -18,12 +18,12 @@
                     <div class="nav-collapse">
                         <ul class="nav pull-right">
                             <li>
-                                <a href="#questionsModal" data-toggle="modal">
+                                <a href="#aboutModal" data-toggle="modal">
                                     <i class="icon-user icon-white"></i> <?php echo __('About'); ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="#questionsModal" data-toggle="modal">
+                                <a href="#giftModal" data-toggle="modal">
                                     <i class="icon-gift icon-white"></i> <?php echo __('Gift Me'); ?>
                                 </a>
                             </li>
@@ -58,10 +58,46 @@
             <div class="row-fluid">
                 <?php echo $content_for_layout; ?>
             </div>
-            <hr></hr>
+            <hr />
             <div class="footer">
 
             </div>
         </div>
+		<div class="modal fade" id="aboutModal">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3><?php echo __('About'); ?></h3>
+			</div>
+			<div class="modal-body">
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn"><?php echo __('Close'); ?></a>
+			</div>
+		</div>
+		<div class="modal fade" id="giftModal">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3><?php echo __('Donate, buy me a Gift!'); ?></h3>
+			</div>
+			<div class="modal-body">
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn"><?php echo __('Close'); ?></a>
+			</div>
+		</div>
+		<div class="modal fade" id="questionsModal">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3><?php echo __('Questions'); ?></h3>
+			</div>
+			<div class="modal-body">
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn"><?php echo __('Close'); ?></a>
+			</div>
+		</div>
     </body>
 </html>
