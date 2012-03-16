@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 		$.getJSON(API_SEARCH, function(response) {
 			if (response.results["0"]) {
 				$.each(response.results, function(i, result) {
-					$("#tweetsTemplate").tmpl(result).prependTo("#tweetsList").fadeIn("slow");
+					$("#tweetsTemplate").tmpl(result).appendTo("#tweetsList").fadeIn("slow");
 				});
 				SINCE_ID = response.results["0"].id_str;
 			}
